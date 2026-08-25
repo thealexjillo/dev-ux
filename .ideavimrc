@@ -1,0 +1,170 @@
+" .ideavimrc
+" thealexjillo's IdeaVim configuration for (most) JetBrains IDEs.
+" Docs:     https://jb.gg/h38q75
+
+
+" ============================================================
+" Leader
+" ============================================================
+
+let mapleader = " "
+nnoremap <SPACE> <Nop>
+
+nnoremap <leader>vi :action VimPluginToggle<CR>
+
+
+" ============================================================
+" General
+" ============================================================
+
+set clipboard+=unnamed
+
+set surround
+set commentary
+
+set number
+set relativenumber
+set hlsearch
+set incsearch
+set scrolloff=5
+
+nnoremap Q gq
+
+
+" ============================================================
+" Save / Quit
+" ============================================================
+
+nnoremap <leader>ww :w<CR>
+nnoremap <leader>wq :wq<CR>
+
+nmap <leader>qq <Action>(CloseContent)
+nmap <leader>qa <Action>(CloseAllEditors)
+
+
+" ============================================================
+" Splits
+" ============================================================
+
+nnoremap <leader>sv <C-w>v
+nnoremap <leader>sh <C-w>s
+nnoremap <leader>sx <C-w>c
+
+nnoremap <leader>sj <C-w>-
+nnoremap <leader>sk <C-w>+
+
+
+" ============================================================
+" Tabs
+" ============================================================
+
+nnoremap <leader>to :action NewScratchFile<CR>
+nnoremap <leader>tx :action CloseActiveTab<CR>
+nnoremap <leader>tn :action NextTab<CR>
+nnoremap <leader>tp :action PreviousTab<CR>
+
+
+" ============================================================
+" Project Explorer
+" ============================================================
+
+nmap <leader>ee <Action>(ActivateProjectToolWindow)
+nmap <leader>er <Action>(SelectInProjectView)
+nmap <leader>ef <Action>(SelectInProjectView)
+
+
+" ============================================================
+" Search
+" ============================================================
+
+" Telescope-style navigation
+nmap <leader>ff <Action>(GotoFile)
+
+" Fuzzy grep project
+nmap <leader>fg <Action>(com.mituzz.fuzzier.grep.FuzzyGrepCI)
+
+" Fuzzy grep current file
+nmap <leader>fs <Action>(com.mituzz.fuzzier.grep.FuzzyGrepCurrentBufferCI)
+
+" Recent files
+nmap <leader>fb <Action>(RecentFiles)
+
+" Symbols
+nmap <leader>fo <Action>(GotoSymbol)
+
+
+" ============================================================
+" Code Navigation
+" ============================================================
+
+" Documentation / hover
+nmap K <Action>(QuickJavaDoc)
+nmap <leader>K <Action>(QuickJavaDoc)
+nmap <leader>gg <Action>(QuickJavaDoc)
+
+" Declaration / definition
+nmap gd <Action>(GotoDeclaration)
+nmap gD <Action>(GotoDefinition)
+
+nmap <leader>gd <Action>(GotoDeclaration)
+nmap <leader>gD <Action>(GotoDefinition)
+
+" Implementations / usages
+nmap gi <Action>(GotoImplementation)
+nmap gr <Action>(ShowUsages)
+
+nmap <leader>gi <Action>(GotoImplementation)
+nmap <leader>gr <Action>(FindUsages)
+
+
+" ============================================================
+" Refactoring / Code Actions
+" ============================================================
+
+nmap <leader>rr <Action>(RenameElement)
+nmap <leader>gf <Action>(ReformatCode)
+nmap <leader>ga <Action>(ShowIntentionActions)
+
+
+" ============================================================
+" DIY Harpoon
+" ============================================================
+
+" Add / toggle bookmark slots
+nmap <leader>ha1 <Action>(ToggleBookmark1)
+nmap <leader>ha2 <Action>(ToggleBookmark2)
+nmap <leader>ha3 <Action>(ToggleBookmark3)
+nmap <leader>ha4 <Action>(ToggleBookmark4)
+nmap <leader>ha5 <Action>(ToggleBookmark5)
+
+" Jump to bookmark slots
+nmap <leader>h1 <Action>(GotoBookmark1)
+nmap <leader>h2 <Action>(GotoBookmark2)
+nmap <leader>h3 <Action>(GotoBookmark3)
+nmap <leader>h4 <Action>(GotoBookmark4)
+nmap <leader>h5 <Action>(GotoBookmark5)
+
+
+" ============================================================
+" IDE Actions
+" ============================================================
+
+nmap <leader>of <Action>(OpenFile)
+nmap <leader>nf <Action>(NewFile)
+nmap <leader>ri <Action>(RestartIde)
+
+
+" ============================================================
+" Debugging
+" ============================================================
+
+nmap <leader>dc <Action>(Debug)
+nmap <leader>dd <Action>(Stop)
+
+
+" ============================================================
+" Plugins
+" ============================================================
+
+Plug 'machakann/vim-highlightedyank'
+Plug 'tpope/vim-commentary'
