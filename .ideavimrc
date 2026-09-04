@@ -68,7 +68,8 @@ nnoremap <leader>tp :action PreviousTab<CR>
 " Project Explorer
 " ============================================================
 
-nmap <leader>ee <Action>(ActivateProjectToolWindow)
+
+nnoremap <leader>ee :NERDTreeToggle<CR>
 nmap <leader>er <Action>(SelectInProjectView)
 nmap <leader>ef <Action>(SelectInProjectView)
 
@@ -162,9 +163,11 @@ nmap <leader>dc <Action>(Debug)
 nmap <leader>dd <Action>(Stop)
 
 
+
 " ============================================================
 " Plugins
 " ============================================================
 
 Plug 'machakann/vim-highlightedyank'
 Plug 'tpope/vim-commentary'
+Plug 'preservim/nerdtree'
