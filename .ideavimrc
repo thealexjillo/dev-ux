@@ -82,10 +82,10 @@ nmap <leader>ef <Action>(SelectInProjectView)
 nmap <leader>ff <Action>(GotoFile)
 
 " Fuzzy grep project
-nmap <leader>fg <Action>(com.mituzz.fuzzier.grep.FuzzyGrepCI)
+nmap <leader>fg <Action>(com.mituuz.fuzzier.grep.FuzzyGrepCI)
 
 " Fuzzy grep current file
-nmap <leader>fs <Action>(com.mituzz.fuzzier.grep.FuzzyGrepCurrentBufferCI)
+nmap <leader>fs <Action>(com.mituuz.fuzzier.grep.FuzzyGrepCurrentBufferCI)
 
 " Recent files
 nmap <leader>fb <Action>(RecentFiles)
