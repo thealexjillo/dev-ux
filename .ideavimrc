@@ -117,6 +117,9 @@ nmap gr <Action>(ShowUsages)
 nmap <leader>gi <Action>(GotoImplementation)
 nmap <leader>gr <Action>(FindUsages)
 
+" Next / previous problem
+nmap <leader>gn <Action>(GotoNextError)
+nmap <leader>gp <Action>(GotoPreviousError)
 
 " ============================================================
 " Refactoring / Code Actions
